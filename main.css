@@ -164,7 +164,165 @@ body {
   select {
     appearance: none;
   }
+ /* Advantages */
 
+ .features {
+  padding: 115px 60px;
+  background-color: #fff;
+}
+
+ .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px; 
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 22px;
+  opacity: 0.8;
+}
+
+.card__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;font-size: 32px;
+  font-weight: 700;
+  border-radius: 50%;
+  background: #eaeff9;
+  height: 100px;
+  width: 100px;
+}
+
+.card__logo.solar_panel {
+  color: #ffb406;
+}
+
+.card__logo.time_work {
+  color: #ad1714;
+}
+
+.card__logo.solar-effective {
+  color: #22a030;
+}
+
+.features__border {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #E6EAF4;
+  
+}
+
+.features__feedback {
+  display: flex;
+}
+
+.features__feedback-left {
+  margin-right: 10px;
+}
+
+.features__feedback-left h2 {
+  font-size: 48px;
+}
+
+.features__feedback-left p {
+  font-size: 18px;
+  opacity: 0.7;
+  line-height: 26px;
+}
+
+.features__feedback-right {
+  display: flex;
+  align-items: center;
+}
+
+.features__box {
+  border-radius: 25px;
+  padding: 30px 40px 25px 40px;
+  color: white;
+}
+
+.features__box h3 {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.features__savings-box {
+  background-color: #dc5e26;
+  box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+  margin-right: 30px;
+}
+
+.stars {
+  color: #ff7039;
+}
+
+.features__rate-box {
+  background-color: #1D263A;
+  box-shadow: 0 6px 0 rgb(29 38 58 / 20%);
+}
+
+.promo {
+  display: flex;
+}
+
+.promo__image {
+  width: 50%;
+  flex-shrink: 0;
+  background-image: url(img/promo.jpg);
+  
+  background-size: cover;
+  background-position: center;
+}
+
+.promo__right {
+  padding: 160px 60px;
+  background: #dd5f26;
+  
+}
+
+.promo__text {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.promo__text p::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ec6b29;
+  margin-right: 10px;
+}
+
+.promo__text p {
+  opacity: 0.8;
+}
+
+.promo__text button {
+  background-color: #107b1c;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+  padding: 15px 30px;
+}
+.promo__btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.promo__text button i {
+  font-size: 15px;
+  margin-left: 5px;
+}
   .form__submit {
     font-size: 18px;
     font-weight: 600;
@@ -258,6 +416,11 @@ body {
       height: 75px;
   }
 
+  .cards {
+    grid-template-columns: auto;
+  }
+
+/* Contact-form */
   .form {
       padding: 50px 10px;
   }
@@ -265,6 +428,12 @@ body {
   .form h1 {
       font-size: 36px;
   }
+
+  .features {
+    padding: 50px 10px;
+    background-color: #fff;
+  }
+  
 
   footer {
       padding: 50px 10px;
@@ -292,5 +461,39 @@ body {
   .about__sun-image {
       width: 75px;
       height: 75px;
+  }
+  .features__feedback {
+    flex-direction: column;
+  }
+
+  .features__feedback-left {
+    margin-right: 0;
+  }
+  
+  .features__feedback-left h2, .features__box h3 {
+    font-size: 36px;
+  }
+
+  .features__feedback-right {
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  .features__savings-box {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .promo {
+    flex-direction: column-reverse;
+  }
+
+  .promo__right {
+    padding: 50px 10px;
+  }
+
+  .promo__image {
+    width: 100%;
+    height: 500px;
   }
 }
