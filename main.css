@@ -64,7 +64,6 @@ body {
     height: 100px;
     animation: rotation 10s linear infinite;
   }
-/* jjjjjQQQQQQQ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   
     .about {
     display: flex;
@@ -405,7 +404,6 @@ body {
   }
 
   .about {
-      position: relative;
       flex-direction: column-reverse;
       padding: 50px 10px;    
   } 
@@ -456,7 +454,6 @@ body {
 @media (max-width: 1024px) {
   .about {
       padding: 115px 20px;
-      position: relative;
   }
 
   .about h1 {
