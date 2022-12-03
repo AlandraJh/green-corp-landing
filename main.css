@@ -64,14 +64,27 @@ body {
     height: 100px;
     animation: rotation 10s linear infinite;
   }
-
-  .about {
+/* jjjjjQQQQQQQ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  
+    .about {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-bottom: 115px;
     padding-top: 115px;
+    background: url('img/back.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
   }
+
+  .orb-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%; 
+    width: 100%;
+ }
 
   .about h1 {
     font-size: 70px;
@@ -96,13 +109,7 @@ body {
     animation:fadeInLeft; /* https://animate.style/ */
     animation-duration: 2s; 
   }
-
-  .about {
-    background: url('img/back.png') no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
+  
   .form__container {
     width: 550px;
   }
@@ -398,10 +405,11 @@ body {
   }
 
   .about {
+      position: relative;
       flex-direction: column-reverse;
-      padding: 50px 10px;
-  }
-
+      padding: 50px 10px;    
+  } 
+  
   .about h1 {
       font-size: 36px;
       line-height: 40px;
@@ -416,6 +424,7 @@ body {
       height: 75px;
   }
 
+ 
   .cards {
     grid-template-columns: auto;
   }
@@ -447,6 +456,7 @@ body {
 @media (max-width: 1024px) {
   .about {
       padding: 115px 20px;
+      position: relative;
   }
 
   .about h1 {
