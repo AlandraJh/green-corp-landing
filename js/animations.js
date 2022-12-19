@@ -23,3 +23,27 @@ function initIncreaseNumberAnimation() {
 }
 
 initIncreaseNumberAnimation();
+
+// Изменение контактной формы
+
+document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
+  if (event.target.value === 'other') {
+    const formContainer = document.createElement('div');
+    formContainer.classList.add('form__group');
+    formContainer.classList.add('form__other-input'); 
+ 
+    const input = document.createElement('input');
+    input.placeholder = "Введите ваш вариант";
+    input.type = "text"; 
+      
+    formContainer.appendChild(input);
+    document.querySelector(".form .form__submit").before(formContainer); 
+  }
+  
+  // удаление поля "другое" контактной формы
+
+  const otherInput = document.querySelector('.form__other-input');
+  if (event.target.value !== 'other' && otherInput) { 
+  otherInput.remove(); 
+  }
+});
