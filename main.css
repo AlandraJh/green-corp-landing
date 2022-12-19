@@ -75,6 +75,7 @@ body {
     background-position: center;
     background-size: cover;
     position: relative;
+    height: 100%;
   }
 
   .orb-canvas {
@@ -82,7 +83,6 @@ body {
     top: 0;
     right: 0;
     height: 100%; 
-    width: 100%;
  }
 
   .about h1 {
@@ -405,7 +405,8 @@ body {
 
   .about {
       flex-direction: column-reverse;
-      padding: 50px 10px;    
+      padding: 50px 10px; 
+      height: 100%; 
   } 
   
   .about h1 {
@@ -454,6 +455,7 @@ body {
 @media (max-width: 1024px) {
   .about {
       padding: 115px 20px;
+      height: 100%;
   }
 
   .about h1 {
