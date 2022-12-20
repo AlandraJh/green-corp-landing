@@ -1,4 +1,4 @@
-const INCREASE_NUMBER_ANIMATION_SPEED = 50;
+const INCREASE_NUMBER_ANIMATION_SPEED = 30;
 
 function increaseNumberAnimationStep (i, element, endNumber) {
   if (i <= endNumber) {
@@ -22,7 +22,7 @@ function initIncreaseNumberAnimation() {
   increaseNumberAnimationStep(0, element, 5000);
 }
 
-initIncreaseNumberAnimation();
+
 
 // Изменение контактной формы
 
@@ -47,3 +47,49 @@ document.querySelector('#budget').addEventListener('change', function handleSele
   otherInput.remove(); 
   }
 });
+
+
+// Скролл переход
+
+function addSmoothScroll(anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+ 
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+}
+ 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  addSmoothScroll(anchor);
+});
+
+addSmoothScroll(document.querySelector('.more-button'));
+
+function onLinkClick(event) {
+  event.preventDefault();
+  document.querySelector(event.target.getAttribute('href')).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+
+function updateScroll() {
+  if (window.scrollY > 0) {
+    document.querySelector('header').classList.add('header__scrolled');
+  } else {
+    document.querySelector('header').classList.remove('header__scrolled');
+  }
+ 
+  // Запуск анимации увеличения числа
+  let windowBottomPosition = window.scrollY + window.innerHeight;
+  let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
+  if (windowBottomPosition >= countElementPosition && !animationInited) {
+    animationInited = true;
+    initIncreaseNumberAnimation();
+  }
+}
+ 
+window.addEventListener('scroll', updateScroll);
+let animationInited = false;
